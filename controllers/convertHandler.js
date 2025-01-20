@@ -20,7 +20,7 @@ function ConvertHandler() {
     let nums = checkDiv(result);
 
     if (!nums) {
-      return undefined;
+      return "invalid number";
     }
 
     let num1 = nums[0];
@@ -28,7 +28,7 @@ function ConvertHandler() {
     result = parseFloat(num1) / parseFloat(num2);
 
     if (isNaN(num1) || isNaN(num2)) {
-      return undefined;
+      return "invalid number";
     }
     
     return result;
@@ -50,7 +50,7 @@ function ConvertHandler() {
       case "kg":
         return "kg";
       default:
-        return undefined;
+        return "invalid unit";
     }
   };
   
